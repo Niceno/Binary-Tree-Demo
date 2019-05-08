@@ -19,7 +19,7 @@ OPT_COMP = -J $(DIR_MODULE) -g -Wall
 OPT_LINK = $(OPT_COMP)
 
 # Program name (This should hardly change)
-PROGRAM_FILE = Binary_Tree
+PROGRAM_FILE = Demo_Binary_Tree
 
 #-------------
 #   Modules
@@ -67,12 +67,14 @@ $(PROGRAM_FILE): $(OBJ)
 #--------------------------------------------------------------------
 $(DIR_OBJECT)/Item_Mod.o:	\
 Const_Mod.f90			\
+Item_Mod.f90			\
 Item_Mod/*.f90
 
 $(DIR_OBJECT)/Binary_Tree_Mod.o:	\
 Const_Mod.f90				\
 Item_Mod.f90				\
 Item_Mod/*.f90				\
+Binary_Tree_Mod.f90			\
 Binary_Tree_Mod/*.f90
 
 #---------------------
