@@ -7,13 +7,13 @@
   implicit none
 !==============================================================================!
 
-  type record
+  type Node_Type
     integer         :: generation
     type(Item_Type) :: item
     integer         :: parent
     integer         :: left
     integer         :: right
-  end type record
+  end type
 
   contains
 
