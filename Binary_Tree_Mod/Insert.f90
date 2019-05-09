@@ -30,7 +30,7 @@
   do
 
     ! Moving to the left
-    if ( list(i) % item <= list(seek) % item ) then
+    if ( list(i) % item .lt. list(seek) % item ) then
       if ( list(seek) % left .eq. OFF ) then   ! found its place
         list(seek) % left   = i
         list(seek) % parent = seek
