@@ -11,6 +11,7 @@
   real(RP)        :: r
 !------------------------------------------------------------------------------!
 
+  ! Start with an empty head
   head = OFF
 
   print *, 'Contents of generated data:'
@@ -24,5 +25,13 @@
 
   print *, 'Contents of sorted binary tree:'
   call Binary_Tree_Mod_Print(list, head)
+
+  print *, 'Maximum value in the binary tree:'
+  i = Binary_Tree_Mod_Get_Max(list, head)
+  print "(i6,f10.3)", i, list(i) % item % member_data
+
+  print *, 'Minimum value in the binary tree:'
+  i = Binary_Tree_Mod_Get_Min(list, head)
+  print "(i6,f10.3)", i, list(i) % item % member_data
 
 end
