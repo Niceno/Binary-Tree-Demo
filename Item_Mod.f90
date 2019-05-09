@@ -10,13 +10,19 @@
     real(RP) :: member_data
   end type
 
-  ! This operator is needed for binary tree to work
-  interface operator(<=)
-    module procedure Item_Mod_Less_Or_Equals
-  end interface operator(<=)
+  ! These operators are needed for binary tree to work
+
+  interface operator( .lt. )
+    module procedure Item_Mod_Less_Than
+  end interface
+
+  interface operator( .gt. )
+    module procedure Item_Mod_Greater_Than
+  end interface
 
   contains
 
-  include 'Item_Mod/Less_Or_Equals.f90'
+  include 'Item_Mod/Less_Than.f90'
+  include 'Item_Mod/Greater_Than.f90'
 
   end module
